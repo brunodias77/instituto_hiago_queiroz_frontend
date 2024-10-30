@@ -1,8 +1,8 @@
 <app-header></app-header>
 <img src="assets/img/banner/one.jpeg" alt="" class="w-full h-[500px]" />
-<section class="bg-[#F0EEEF] w-full max-h-[400px]">
-  <div class="max-w-screen-xl mx-auto px-2 py-20">
-    <div class="grid grid-cols-1 md:grid-cols-2">
+<section class="bg-[#F0EEEF] w-full">
+  <div class="max-w-screen-xl mx-auto px-2 py-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between">
       <div class="flex flex-col gap-5">
         <h1 class="font-bold text-xl text-gray-900">Quem Somos</h1>
         <p class="text-gray-600">
@@ -18,11 +18,16 @@
           incluem ética, diversidade cultural, crescimento humano e respeito
           mútuo.
         </p>
-        <button class="bg-[#056caf] max-w-50 rounded-xl text-white">
+        <button class="bg-[#056caf] max-w-[100px] py-2 rounded-xl text-white">
           saiba mais
         </button>
       </div>
-      <div>foto</div>
+      <div class="flex items-center justify-center">
+        <img src="assets/img/logo-oficial.svg" alt="" />
+      </div>
     </div>
   </div>
 </section>
+<span class="block text-blue-600 text-4xl font-bold">{{
+  animatedClientValue
+}}</span>
