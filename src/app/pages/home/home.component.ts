@@ -19,15 +19,15 @@ export class HomeComponent {
   }
 
   private startAnimation() {
-    this.animateValue(0, 250, 3000, (value) => {
+    this.animateValue(0, 250, 2000, (value) => {
       this.animatedClientValue = value;
     });
 
-    this.animateValue(0, 314, 3000, (value) => {
+    this.animateValue(0, 314, 2000, (value) => {
       this.animatedProjectValue = value;
     });
 
-    this.animateValue(0, 27, 3000, (value) => {
+    this.animateValue(0, 27, 2000, (value) => {
       this.animatedAffiliateValue = value;
     });
   }

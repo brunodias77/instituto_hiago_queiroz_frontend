@@ -1,8 +1,34 @@
 <app-header></app-header>
 <img src="assets/img/banner/one.jpeg" alt="" class="w-full h-[500px]" />
-<section class="bg-[#F0EEEF] w-full">
+<!-- <section class="bg-[#F0EEEF] w-full">
+  <div
+    class="max-w-screen-xl mx-auto py-4 flex flex-col items-center justify-center"
+  >
+    <div class="flex flex-col items-center h-full w-full gap-10">
+      <h2 class="font-bold text-2xl text-white">Nosso Impacto</h2>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
+          <span class="text-white">Pessoas Ajudadas</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
+          <span class="text-white">Pessoas Ajudadas</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
+          <span class="text-white">Pessoas Ajudadas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="quem_somos" class="bg-[#F0EEEF] w-full">
   <div class="max-w-screen-xl mx-auto px-2 py-2">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 items-center justify-between py-10"
+    >
       <div class="flex flex-col gap-5">
         <h1 class="font-bold text-xl text-gray-900">Quem Somos</h1>
         <p class="text-gray-600">
@@ -18,16 +44,87 @@
           incluem ética, diversidade cultural, crescimento humano e respeito
           mútuo.
         </p>
+
         <button class="bg-[#056caf] max-w-[100px] py-2 rounded-xl text-white">
           saiba mais
         </button>
       </div>
-      <div class="flex items-center justify-center">
-        <img src="assets/img/logo-oficial.svg" alt="" />
+      <div class="flex items-center justify-center h-full w-full">
+        <img
+          src="assets/img/logo-oficial.svg"
+          alt=""
+          class="h-[300px] w-[300px]"
+        />
       </div>
     </div>
   </div>
 </section>
-<span class="block text-blue-600 text-4xl font-bold">{{
-  animatedClientValue
-}}</span>
+<section id="nosso_impacto" class="bg-[#056caf] w-full">
+  <div
+    class="max-w-screen-xl mx-auto py-4 flex flex-col items-center justify-center"
+  >
+    <div class="flex flex-col items-center h-full w-full gap-10">
+      <h2 class="font-bold text-2xl text-white">Nosso Impacto</h2>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
+          <span class="text-white">Pessoas Ajudadas</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
+          <span class="text-white">Pessoas Ajudadas</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
+          <span class="text-white">Pessoas Ajudadas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nossos_patrocinadores" class="w-full bg-[#F5F5F5]">
+  <div class="max-w-screen-xl mx-auto">
+    <h2>Nossos Patrocionadores</h2>
+  </div>
+</section>
+
+<section id="projetos" class="bg-[#056caf] w-full">
+  <div
+    class="max-w-screen-xl mx-auto py-4 flex flex-col items-center justify-center gap-12"
+  >
+    <h1 class="font-bold text-white text-2xl">Nossos Projetos</h1>
+    <p class="text-white">
+      Através desses projetos, ajudamos a comunidade do Capão a se
+      profissionalizar, se alimentar e a viver melhor.
+    </p>
+    <div class="grid grid-cols-4 gap-2">
+      <div
+        class="h-[200px] w-[200px] bg-[#3990c8] rounded-xl flex items-center justify-center"
+      >
+        <div class="h-[180px] w-[180px] bg-white rounded-xl">teste</div>
+      </div>
+
+      <div
+        class="h-[200px] w-[200px] bg-[#3990c8] rounded-xl flex items-center justify-center"
+      >
+        <div class="h-[180px] w-[180px] bg-white rounded-xl">teste</div>
+      </div>
+
+      <div
+        class="h-[200px] w-[200px] bg-[#3990c8] rounded-xl flex items-center justify-center"
+      >
+        <div class="h-[180px] w-[180px] bg-white rounded-xl">teste</div>
+      </div>
+
+      <div
+        class="h-[200px] w-[200px] bg-[#3990c8] rounded-xl flex items-center justify-center"
+      >
+        <div class="h-[180px] w-[180px] bg-white rounded-xl">teste</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="nossa_equipe"></section>
+<section id="nossos_patrocinadores" class="w-full bg-[#F5F5F5]"></section>
+<section id="ultimas_noticias"></section>
