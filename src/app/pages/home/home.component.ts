@@ -10,25 +10,36 @@ import { CountUpModule } from 'ngx-countup';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent {
-  animatedClientValue: number = 0;
-  animatedProjectValue: number = 0;
-  animatedAffiliateValue: number = 0;
-
+  culturalClass: number = 0;
+  SocialPsychology: number = 0;
+  Assisted: number = 0;
+  collectedFood: number = 0;
+  socialActions: number = 0;
+  plasticLid: number = 0;
   constructor() {
     this.startAnimation();
   }
 
   private startAnimation() {
-    this.animateValue(0, 250, 2000, (value) => {
-      this.animatedClientValue = value;
+    this.animateValue(0, 150, 2000, (value) => {
+      this.culturalClass = value;
     });
 
-    this.animateValue(0, 314, 2000, (value) => {
-      this.animatedProjectValue = value;
+    this.animateValue(0, 100, 2000, (value) => {
+      this.SocialPsychology = value;
     });
 
-    this.animateValue(0, 27, 2000, (value) => {
-      this.animatedAffiliateValue = value;
+    this.animateValue(0, 300, 2000, (value) => {
+      this.Assisted = value;
+    });
+    this.animateValue(0, 550, 2000, (value) => {
+      this.collectedFood = value;
+    });
+    this.animateValue(0, 9, 2000, (value) => {
+      this.socialActions = value;
+    });
+    this.animateValue(0, 3000, 2000, (value) => {
+      this.plasticLid = value;
     });
   }
 
