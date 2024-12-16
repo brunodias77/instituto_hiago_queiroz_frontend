@@ -1,36 +1,14 @@
 <app-header></app-header>
 <img src="assets/img/banner/one.jpeg" alt="" class="w-full h-[500px]" />
-<!-- <section class="bg-[#F0EEEF] w-full">
-  <div
-    class="max-w-screen-xl mx-auto py-4 flex flex-col items-center justify-center"
-  >
-    <div class="flex flex-col items-center h-full w-full gap-10">
-      <h2 class="font-bold text-2xl text-white">Nosso Impacto</h2>
-      <div class="grid grid-cols-3 gap-2">
-        <div class="flex flex-col items-center justify-center gap-2">
-          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
-          <span class="text-white">Pessoas Ajudadas</span>
-        </div>
-        <div class="flex flex-col items-center justify-center gap-2">
-          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
-          <span class="text-white">Pessoas Ajudadas</span>
-        </div>
-        <div class="flex flex-col items-center justify-center gap-2">
-          <span class="text-white text-2xl">{{ animatedClientValue }}</span>
-          <span class="text-white">Pessoas Ajudadas</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <section id="quem_somos" class="bg-[#F4F9FF] w-full">
   <div class="max-w-screen-xl mx-auto px-2 py-2">
     <div
       class="grid grid-cols-1 md:grid-cols-2 items-center justify-between py-10"
     >
       <div class="flex flex-col gap-5">
-        <h1 class="font-bold text-xl text-gray-900">Quem Somos</h1>
+        <h2 class="font-manrope text-4xl font-bold text-gray-800 text-center">
+          Quem Somos
+        </h2>
         <p class="text-gray-600">
           O Instituto Hiago Queiroz é uma organização social que busca valorizar
           e proteger a vida por meio de atividades que promovem o
@@ -64,7 +42,9 @@
     class="max-w-screen-xl mx-auto py-20 flex flex-col items-center justify-center"
   >
     <div class="flex flex-col items-center h-full w-full gap-12">
-      <h2 class="font-bold text-2xl text-white">Nosso Impacto</h2>
+      <h2 class="font-manrope text-4xl font-bold text-white text-center">
+        Nosso Impacto
+      </h2>
       <div class="grid grid-cols-3 gap-2">
         <div class="flex flex-col items-center justify-center gap-2">
           <span class="text-white text-4xl">{{ culturalClass }}</span>
@@ -101,80 +81,39 @@
 
 <section id="ultimas_noticias" class="py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h2 class="font-manrope text-4xl font-bold text-gray-900 text-center mb-14">
+    <h2 class="font-manrope text-4xl font-bold text-gray-800 text-center mb-14">
       Ultimas noticias
     </h2>
     <div
       class="flex justify-center mb-14 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8"
     >
+      @for (card of cards; track $index) {
       <div
-        class="group cursor-pointer w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl p-5 transition-all duration-300 hover:bg-[#056caf]"
+        class="group transform transition-transform duration-300 hover:scale-105 cursor-pointer w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl p-5 hover:border-[#056caf]"
       >
         <div class="flex items-center mb-6">
           <img
-            src="https://pagedone.io/asset/uploads/1696244553.png"
-            alt="Harsh image"
+            [src]="card.imageSrc"
+            [alt]="card.imageAlt"
             class="rounded-lg w-full object-cover"
           />
         </div>
         <div class="block">
           <h4 class="text-gray-900 font-medium leading-8 mb-9">
-            Fintech 101: Exploring the Basics of Electronic Payments
-          </h4>
-          <div class="flex items-center justify-between font-medium">
-            <h6 class="text-sm text-gray-500">By Harsh C.</h6>
-            <span class="text-sm text-indigo-600">2 year ago</span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="group cursor-pointer w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl p-5 transition-all duration-300 hover:bg-[#056caf]"
-      >
-        <div class="flex items-center mb-6">
-          <img
-            src="https://pagedone.io/asset/uploads/1696244579.png"
-            alt="John image"
-            class="rounded-lg w-full object-cover"
-          />
-        </div>
-        <div class="block">
-          <h4 class="text-gray-900 font-medium leading-8 mb-9">
-            From Classroom to Cyberspace: The Growing Influence of EdTech in
-            Fintech
-          </h4>
-          <div class="flex items-center justify-between font-medium">
-            <h6 class="text-sm text-gray-500">By John D.</h6>
-            <span class="text-sm text-[#056caf]">2 year ago</span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="group cursor-pointer w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl p-5 transition-all duration-300 hover:bg-[#056caf]"
-      >
-        <div class="flex items-center mb-6">
-          <img
-            src="https://pagedone.io/asset/uploads/1696244619.png"
-            alt="Alexa image"
-            class="rounded-lg w-full object-cover"
-          />
-        </div>
-        <div class="block">
-          <h4 class="text-gray-900 font-medium leading-8 mb-9">
-            Fintech Solutions for Student Loans: Easing the Burden of Education
-            Debt
+            {{ card.title }}
           </h4>
           <div class="flex items-center justify-between font-medium">
             <h6 class="text-sm text-gray-500">By Alexa H.</h6>
-            <span class="text-sm text-[#056caf]">2 year ago</span>
+            <span class="text-sm text-[#056caf]">12 Dez, 2024</span>
           </div>
         </div>
       </div>
+      }
     </div>
-    <a
-      href="javascript:;"
-      class="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center text-gray-900 font-semibold mx-auto transition-all duration-300 hover:bg-gray-100"
-      >View All</a
-    >
+    <app-button
+      label="Ver mais"
+      classes="p-2 flex justify-center items-center font-semibold mx-auto"
+    ></app-button>
   </div>
 </section>
 
@@ -182,8 +121,10 @@
   <div
     class="max-w-screen-xl mx-auto py-20 flex flex-col items-center justify-center gap-8"
   >
-    <h1 class="font-bold text-white text-2xl">Nossos Projetos</h1>
-    <p class="text-white">
+    <h2 class="font-manrope text-4xl font-bold text-white text-center">
+      Nossos Projetos
+    </h2>
+    <p class="text-white text-xl">
       Através desses projetos, ajudamos a comunidade do Capão a se
       profissionalizar, se alimentar e a viver melhor.
     </p>
@@ -247,7 +188,9 @@
 
 <section id="nossos_patrocinadores" class="w-full bg-[#FFFF]">
   <div class="max-w-screen-xl mx-auto py-20">
-    <h2 class="text-bold text-2xl text-center">Nossos Patrocinadores</h2>
+    <h2 class="font-manrope text-4xl font-bold text-gray-800 text-center">
+      Nossos Patrocinadores
+    </h2>
 
     <div class="grid grid-cols-5 gap-10">
       <img src="assets/img/partnes/parceiro-02.svg" alt="" />
@@ -265,7 +208,9 @@
   <div
     class="max-w-screen-xl mx-auto py-20 flex flex-col items-center justify-center gap-12"
   >
-    <h2 class="font-bold text-2xl">Conheca nossa equipe</h2>
+    <h2 class="font-manrope text-4xl font-bold text-gray-900 text-center mb-14">
+      Conheca nossa equipe
+    </h2>
 
     <div class="grid grid-cols-3 gap-10">
       <div class="flex flex-col items-center justify-center gap-2">
@@ -322,110 +267,6 @@
         />
         <h3 class="font-bold text-gray-800">Rubens Gomes</h3>
         <p class="text-gray-700">Conselheiro Fiscal 3</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h2 class="font-manrope text-4xl font-bold text-gray-900 text-center mb-16">
-      Ultimas Noticias
-    </h2>
-    <div
-      class="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8"
-    >
-      <div
-        class="cursor-pointer group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl hover:border-[#056caf]"
-      >
-        <div class="flex items-center">
-          <img
-            src="https://pagedone.io/asset/uploads/1696244317.png"
-            alt="blogs tailwind section"
-            class="rounded-t-2xl w-full object-cover"
-          />
-        </div>
-        <div
-          class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50"
-        >
-          <span class="text-indigo-600 font-medium mb-4 block"
-            >Jan 01, 2023</span
-          >
-          <h4 class="text-xl text-gray-900 font-medium leading-8 mb-4">
-            Clever ways to invest in product to organize your portfolio
-          </h4>
-          <p class="text-gray-500 leading-6 mb-4">
-            Discover smart investment strategies to streamline and organize your
-            portfolio..
-          </p>
-          <a
-            href="javascript:;"
-            class="cursor-pointer text-lg text-indigo-600 font-semibold"
-            >Read more..</a
-          >
-        </div>
-      </div>
-
-      <div
-        class="cursor-pointer group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl hover:border-[#056caf]"
-      >
-        <div class="flex items-center">
-          <img
-            src="https://pagedone.io/asset/uploads/1696244340.png"
-            alt="blogs tailwind section"
-            class="rounded-t-2xl w-full object-cover"
-          />
-        </div>
-        <div
-          class="p-4 lg:p-6 cursor-pointer transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50"
-        >
-          <span class="text-indigo-600 font-medium mb-3 block"
-            >Feb 01, 2023</span
-          >
-          <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">
-            How to grow your profit through systematic investment with us
-          </h4>
-          <p class="text-gray-500 leading-6 mb-10">
-            Unlock the power of systematic investment with us and watch your
-            profits soar. Our..
-          </p>
-          <a
-            href="javascript:;"
-            class="cursor-pointer text-lg text-indigo-600 font-semibold"
-            >Read more..</a
-          >
-        </div>
-      </div>
-
-      <div
-        class="cursor-pointer group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl hover:border-[#056caf]"
-      >
-        <div class="flex items-center">
-          <img
-            src="https://pagedone.io/asset/uploads/1696244356.png"
-            alt="blogs tailwind section"
-            class="rounded-t-2xl w-full object-cover"
-          />
-        </div>
-        <div
-          class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50"
-        >
-          <span class="text-indigo-600 font-medium mb-3 block"
-            >Mar 01, 20233</span
-          >
-          <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">
-            How to analyze every holdings of your portfolio
-          </h4>
-          <p class="text-gray-500 leading-6 mb-10">
-            Our comprehensive guide will equip you with the tools and insights
-            needed to..
-          </p>
-          <a
-            href="javascript:;"
-            class="cursor-pointer text-lg text-indigo-600 font-semibold"
-            >Read more..</a
-          >
-        </div>
       </div>
     </div>
   </div>
