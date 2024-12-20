@@ -55,8 +55,8 @@
     </a>
     <div class="hidden md:flex items-center justify-center gap-7">
       <div *ngFor="let section of sections">
-        <a href="#">
-          {{ section }}
+        <a [href]="section.path">
+          {{ section.title }}
         </a>
       </div>
     </div>
@@ -82,8 +82,8 @@
     }"
   >
     <div *ngFor="let section of sections">
-      <a href="#">
-        {{ section }}
+      <a [href]="section.path">
+        {{ section.title }}
       </a>
     </div>
   </div>

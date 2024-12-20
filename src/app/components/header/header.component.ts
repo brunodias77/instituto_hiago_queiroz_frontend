@@ -10,9 +10,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  sections: string[] = ['Home', 'Projetos', 'Transparencia', 'Direcao', 'Blog'];
+  sections: { title: string; path: string }[] = [
+    { title: 'Home', path: '/' },
+    { title: 'Projetos', path: '/' },
+    { title: 'Transparencia', path: '/' },
+    { title: 'Direcao', path: '/' },
+    { title: 'Blog', path: '/blog' },
+  ];
   isMenuOpen = false;
-  state: boolean = false; 
+  state: boolean = false;
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
