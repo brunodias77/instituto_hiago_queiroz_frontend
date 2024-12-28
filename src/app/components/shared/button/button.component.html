@@ -1,7 +1,19 @@
+<a
+  *ngIf="link"
+  [href]="link"
+  [ngClass]="['px-4 py-2 text-white bg-[#056caf] rounded-lg', classes]"
+  class="hover:bg-[#05588c] disabled:opacity-50 inline-block"
+  [attr.aria-disabled]="disabled ? true : null"
+  [attr.tabindex]="disabled ? -1 : null"
+>
+  <span>{{ label }}</span>
+</a>
+
 <button
+  *ngIf="!link"
   [type]="type"
   [disabled]="disabled"
-  [ngClass]="['px-4 py-2  text-white bg-[#056caf] rounded-lg', classes]"
+  [ngClass]="['px-4 py-2 text-white bg-[#056caf] rounded-lg', classes]"
   class="hover:bg-[#05588c] disabled:opacity-50"
 >
   {{ label }}

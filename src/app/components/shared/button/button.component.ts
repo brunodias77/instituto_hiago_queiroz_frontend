@@ -13,4 +13,5 @@ export class ButtonComponent {
   @Input() label: string = 'Button';
   @Input() disabled: boolean = false;
   @Input() classes: string = ''; // para estilos adicionais
+  @Input() link?: string; // Optional link input
 }
