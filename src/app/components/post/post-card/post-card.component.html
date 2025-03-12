@@ -1,0 +1,46 @@
+<a class="w-full flex items-center gap-6" [href]="'/post/' + post.postId">
+  <div
+    class="h-48 lg:w-52 flex-none bg-cover text-center overflow-hidden rounded-xl"
+    [style.backgroundImage]="'url(' + post.imageUrl + ')'"
+    [title]="post.title"
+  ></div>
+  <div class="flex flex-col cursor-pointer">
+    <span
+      class="px-4 py-1 bg-[#056caf] rounded-2xl text-gray-200 inline-flex items-center justify-center mb-2 w-max"
+      >{{ post.category }}</span
+    >
+    <div
+      class="mt-3 md:mt-0 text-gray-700 hover:text-[#056caf] font-bold text-2xl mb-2"
+    >
+      {{ post.title }}
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 justify-center">
+        <img
+          [src]="post.imageUrl"
+          class="h-4 w-4 rounded-full mr-2 object-cover"
+        />
+        <p class="text-gray-600 text-sm capitalize">
+          {{ post.userName }}
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2 justify-center">
+        <img src="/assets/icons/calendar.svg" alt="icone de calendario" />
+        <span class="text-gray-600 text-xs">
+          {{ post.publicationDate | date : "dd MMM yyyy" }}
+        </span>
+      </div>
+
+      <div class="flex items-center gap-2 justify-center">
+        <img src="/assets/icons/clock.svg" alt="icone de calendario" />
+        <span class="text-gray-600 text-xs"> 3 Min. de leitura </span>
+      </div>
+    </div>
+
+    <div class="text-gray-600">
+      {{ post.content | slice : 0 : 100 }}...
+      <!-- Exibe os primeiros 100 caracteres -->
+    </div>
+  </div>
+</a>

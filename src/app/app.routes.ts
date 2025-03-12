@@ -6,7 +6,7 @@ import { DoeComponent } from './pages/doe/doe.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'post', component: PostComponent },
+  { path: 'post/:id', component: PostComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'doe', component: DoeComponent },
 ];
